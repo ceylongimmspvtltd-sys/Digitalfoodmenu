@@ -20,9 +20,9 @@ const menuItems = [
   { id: 'sri-lankan-rice-curry', category: 'Main Dish', name: 'Sri Lankan Vegetable Rice & Curry', price: 1350, description: 'Our island classic, served with five comforting curries.', ingredients: 'Red rice · 5 vegetable curries · sambol · papadum', time: '20–25 min', tags: 'Vegetarian · Five curries', tag: 'Local' },
   { id: 'add-on-chicken-curry', category: 'Main Dish', name: 'Add-on: Chicken Curry', price: 550, description: 'A fragrant serving of Umbrella’s chicken curry for your table.', ingredients: 'Chicken · roasted spices · coconut milk · curry leaves', time: '10–15 min', tags: 'Add-on · House curry', tag: 'Add-on' },
   { id: 'add-on-baby-jackfruit', category: 'Main Dish', name: 'Add-on: Baby Jackfruit Curry', price: 550, description: 'Young jackfruit cooked until tender in island spices.', ingredients: 'Baby jackfruit · coconut milk · roasted spices', time: '10–15 min', tags: 'Vegetarian · Add-on', tag: 'Add-on' },
-  { id: 'coconut-rotti', category: 'Main Dish', name: 'Coconut Rotti', price: 1350, description: 'Fresh coconut rotti with dhal curry, sambal and lunu miris.', ingredients: 'Coconut rotti · dhal curry · coconut sambal · lunu miris', time: '20–25 min', tags: 'Vegetarian · Sri Lankan classic', tag: 'Local' },
-  { id: 'vegetable-fried-rice', category: 'Main Dish', name: 'Vegetable Fried Rice', price: 1500, description: 'Wok-tossed rice with mushroom devilled, garlic kankun and chilli paste.', ingredients: 'Rice · vegetables · mushroom devilled · garlic kankun · chilli paste', time: '20–25 min', tags: 'Vegetarian · Wok-tossed', tag: 'Vegetarian' },
-  { id: 'egg-fried-rice', category: 'Main Dish', name: 'Egg Fried Rice', price: 1800, description: 'Fragrant fried rice with chicken devilled, garlic kankun and chilli paste.', ingredients: 'Rice · egg · chicken devilled · garlic kankun · chilli paste', time: '20–25 min', tags: 'Hearty · Wok-tossed', tag: 'Popular' },
+  { id: 'coconut-rotti', category: 'Main Dish', name: 'Coconut Rotti', price: 1350, description: 'Fresh coconut rotti with dhal curry, sambal and lunu miris.', ingredients: 'Coconut rotti · dhal curry · coconut sambal · lunu miris', time: '20–25 min', tags: 'Vegetarian · Sri Lankan classic', tag: 'Local', image: 'assets/roti.jpg' },
+  { id: 'vegetable-fried-rice', category: 'Main Dish', name: 'Vegetable Fried Rice', price: 1500, description: 'Wok-tossed rice with mushroom devilled, garlic kankun and chilli paste.', ingredients: 'Rice · vegetables · mushroom devilled · garlic kankun · chilli paste', time: '20–25 min', tags: 'Vegetarian · Wok-tossed', tag: 'Vegetarian', image: 'assets/fried-rice.jpg' },
+  { id: 'egg-fried-rice', category: 'Main Dish', name: 'Egg Fried Rice', price: 1800, description: 'Fragrant fried rice with chicken devilled, garlic kankun and chilli paste.', ingredients: 'Rice · egg · chicken devilled · garlic kankun · chilli paste', time: '20–25 min', tags: 'Hearty · Wok-tossed', tag: 'Popular', image: 'assets/fried-rice.jpg' },
   { id: 'pepper-chicken-mash', category: 'Main Dish', name: 'Ella Valley Pepper Chicken & Mash', price: 1950, description: 'Our chef’s special: juicy pepper chicken with silky mash and mountain soul.', ingredients: 'Pepper chicken · potato mash · seasonal vegetables · herbs', time: '25–30 min', tags: "Chef's special · Made to order", tag: "Chef's pick", featured: true },
   // Chopsey and starters
   { id: 'vegetable-chopsey', category: 'Chopsey', name: 'Vegetable Chopsey', price: 1300, description: 'Crisp vegetables in a glossy, savoury chopsey sauce.', ingredients: 'Carrot · cabbage · beans · spring onion · chopsey sauce', time: '20–25 min', tags: 'Vegetarian · Wok-tossed', tag: 'Vegetarian' },
@@ -109,19 +109,19 @@ const imageByCategory = {
   'Pancakes': 'assets/pancake.jpg',
   'Umbrella Special Pancakes': 'assets/pancake.jpg',
   'Fresh Juice': 'assets/juice.jpg',
-  'Lassie': 'assets/juice.jpg',
-  'Milkshake': 'assets/juice.jpg',
-  'Soft Drinks': 'assets/juice.jpg',
+  'Lassie': 'assets/lassie.jpg',
+  'Milkshake': 'assets/milkshake.jpg',
+  'Soft Drinks': 'assets/soft-drinks.jpg',
   'Tea & Coffee': 'assets/tea.jpg',
   'Signature Roti': 'assets/roti.jpg',
   'Main Dish': 'assets/rice-curry.jpg',
   'Boiled Vegetables': 'assets/rice-curry.jpg',
-  'Chopsey': 'assets/rice-curry.jpg',
+  'Chopsey': 'assets/chopsey.jpg',
   'Stews / Starters': 'assets/starters.jpg',
   'Omelette': 'assets/omelette.jpg',
   'Umbrella Special Omelette': 'assets/omelette.jpg',
-  'Sweet Corner': 'assets/pancake.jpg',
-  'Ice Cream': 'assets/pancake.jpg'
+  'Sweet Corner': 'assets/sweet-treats.jpg',
+  'Ice Cream': 'assets/sweet-treats.jpg'
 };
 
 const itemMap = new Map(menuItems.map(item => [item.id, item]));
