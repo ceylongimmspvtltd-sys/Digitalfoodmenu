@@ -52,7 +52,7 @@ img { display: block; max-width: 100%; }
   z-index: 5;
 }
 .brand { display: inline-flex; align-items: center; gap: 11px; min-width: max-content; }
-.brand-logo { width: 96px; height: 61px; object-fit: contain; filter: drop-shadow(0 5px 8px rgba(9, 47, 54, .12)); transition: transform .25s ease; }
+.brand-logo { width: 68px; height: 44px; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(9, 47, 54, .12)); transition: transform .25s ease; }
 .brand:hover .brand-logo { transform: rotate(-2deg) scale(1.04); }
 .brand-place { color: var(--ink-soft); font-family: var(--display); font-size: 8px; font-weight: 800; letter-spacing: .15em; white-space: nowrap; }
 .brand-mark {
@@ -396,7 +396,7 @@ kbd { display: grid; place-items: center; width: 18px; height: 18px; color: #91a
 @media (max-width: 560px) {
   body { font-size: 14px; }
   .topbar, .hero, .experience-bar, .menu-area, .footer, .story-section, .visit-section { width: calc(100% - 30px); }
-  .brand-logo { width: 80px; height: 51px; }
+  .brand-logo { width: 62px; height: 40px; }
   .brand-place { display: none; }
   .brand-copy strong { font-size: 12px; }
   .brand-copy small { font-size: 8px; }
