@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#092f36" />
+    <meta name="description" content="The Umbrella Cafe Ella digital menu — mountain views, Sri Lankan comfort food and fresh cafe favourites." />
+    <title>Umbrella Cafe · Ella | Digital Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Umbrella Cafe Ella home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 24.3C6.8 15.7 13.9 9 22 9s15.2 6.7 16 15.3H6Z" fill="currentColor" />
+              <path d="M21.8 24.3v9.1c0 2.1 1.7 3.8 3.8 3.8 1.8 0 3.3-1.2 3.7-2.8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+              <path d="M11 24.3c1.4 2.1 3.2 3.2 5.4 3.2s4-1.1 5.4-3.2c1.4 2.1 3.2 3.2 5.4 3.2s4-1.1 5.4-3.2c1.4 2.1 3.2 3.2 5.4 3.2" stroke="#F5C94A" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <strong>UMBRELLA</strong>
+            <small>CAFE · ELLA</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a class="active" href="#menu">Menu</a>
+          <a href="#story">Our story</a>
+          <a href="#visit">Visit us</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="language-button" id="languageButton" type="button" aria-label="Change language">
+            <span class="globe-icon" aria-hidden="true">◎</span><span id="languageLabel">EN</span><span class="chevron">⌄</span>
+          </button>
+          <button class="order-button" id="orderButton" type="button">
+            <span class="bag-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 8.5h13l1 11h-15l1-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9V6.8a3 3 0 0 1 6 0V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span>My order</span><b class="order-count" id="orderCount">0</b>
+          </button>
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span></button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="top">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> The mountain is calling</div>
+            <h1>Good food.<br /><em>Great heights.</em></h1>
+            <p class="hero-description">A little corner of Ella serving big Sri Lankan flavour, slow mornings and views worth staying for.</p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#menu">Explore our menu <span>↗</span></a>
+              <button class="text-button" type="button" id="storyButton">Our story <span>→</span></button>
+            </div>
+            <div class="hero-details">
+              <div class="detail-chip"><span class="detail-icon green-icon">⌁</span><span><b>Open today</b><small>8:00 AM — 10:00 PM</small></span></div>
+              <span class="detail-divider"></span>
+              <div class="detail-chip"><span class="detail-icon yellow-icon">♧</span><span><b>Table 08</b><small>Ella, Sri Lanka</small></span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Food at Umbrella Cafe with a mountain view">
+            <div class="hero-sun"></div>
+            <div class="hero-image-wrap">
+              <img src="assets/hero-food.jpg" alt="Sri Lankan food and tea on a table overlooking the Ella mountains" />
+              <div class="image-shade"></div>
+              <div class="image-stamp"><span>EST.</span><strong>2024</strong><span>ELLA, SL</span></div>
+            </div>
+            <div class="floating-note pick-note"><span class="note-icon">✦</span><span><b>Chef's pick</b><small>Pepper chicken &amp; mash</small></span></div>
+            <div class="floating-note view-note"><span class="view-icon">◉</span><span><b>Fresh from the hills</b><small>Made to order</small></span></div>
+            <div class="scan-card">
+              <div class="scan-card-top"><span class="mini-umbrella">☂</span><span>SCAN TO ORDER</span><span class="scan-signal">⌁</span></div>
+              <div class="qr-code" id="qrCode" aria-label="Decorative QR code for the Umbrella Cafe menu"></div>
+              <p>Point your camera here<br /><b>and let the feast begin.</b></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="experience-bar" aria-label="Digital menu features">
+          <div class="experience-intro"><span class="sparkle">✦</span><span><b>Take your time.</b><small>Good things are made slowly.</small></span></div>
+          <div class="experience-feature"><span class="feature-number">01</span><span><b>Pick your mood</b><small>Browse by category</small></span></div>
+          <div class="experience-feature"><span class="feature-number">02</span><span><b>Know your dish</b><small>Ingredients &amp; timing</small></span></div>
+          <div class="experience-feature"><span class="feature-number">03</span><span><b>Call it in</b><small>Order from your table</small></span></div>
+        </section>
+
+        <section class="menu-area" id="menu">
+          <div class="section-heading menu-heading">
+            <div>
+              <div class="eyebrow dark-eyebrow"><span class="eyebrow-dot"></span> From our kitchen</div>
+              <h2>Find your <em>favourite.</em></h2>
+            </div>
+            <p>Every plate has a little bit of Ella in it.<br /><span>Tap a dish to see the details.</span></p>
+          </div>
+
+          <div class="category-scroller" id="categoryScroller" aria-label="Menu categories"></div>
+
+          <div class="menu-tools">
+            <label class="search-box" for="menuSearch">
+              <span aria-hidden="true">⌕</span>
+              <input id="menuSearch" type="search" placeholder="Search dishes, drinks, ingredients..." autocomplete="off" />
+              <kbd>/</kbd>
+            </label>
+            <div class="results-note" id="resultsNote">Showing <b>all favourites</b></div>
+          </div>
+
+          <div class="featured-grid" id="featuredGrid"></div>
+          <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <span>◌</span><h3>Nothing on this trail.</h3><p>Try another search or explore all of our categories.</p><button class="outline-button" id="clearSearch" type="button">Show all dishes</button>
+          </div>
+        </section>
+
+        <section class="story-section" id="story">
+          <div class="story-image"><img src="image-search/umbrella-cafe-ella-sri-lanka-logo-food-1.jpg" alt="A cosy cafe corner in Ella" /><span class="story-label">A table with a view</span></div>
+          <div class="story-copy">
+            <div class="eyebrow dark-eyebrow"><span class="eyebrow-dot"></span> More than a menu</div>
+            <h2>Made for mountain<br /><em>moments.</em></h2>
+            <p>From a steaming pot of healthy tea to the rhythmic chop of kottu, Umbrella is where the flavours of Sri Lanka meet the easy pace of Ella.</p>
+            <div class="story-stats"><span><strong>01</strong><small>local produce</small></span><span><strong>∞</strong><small>mountain views</small></span><span><strong>0%</strong><small>rush</small></span></div>
+            <a class="text-button dark-text-button" href="#visit">Find us in Ella <span>↗</span></a>
+          </div>
+        </section>
+
+        <section class="visit-section" id="visit">
+          <div class="visit-card"><span class="visit-icon">☂</span><div><b>Umbrella Cafe — Ella</b><p>Come for the view. Stay for the last pancake.</p></div><a href="https://www.google.com/maps/search/Umbrella+Cafe+Ella" target="_blank" rel="noreferrer" aria-label="Open Umbrella Cafe in Google Maps">Open maps ↗</a></div>
+          <p class="service-note"><span>✦</span> A 10% service charge will be added to the total bill.</p>
+        </section>
+      </main>
+
+      <footer class="footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">☂</span><span class="brand-copy"><strong>UMBRELLA</strong><small>CAFE · ELLA</small></span></a><span>Made with love in the hills of Sri Lanka <span class="footer-heart">♥</span></span><span>Digital menu · v1.0</span></footer>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true"><a href="#menu">Menu <span>↗</span></a><a href="#story">Our story <span>↗</span></a><a href="#visit">Visit us <span>↗</span></a></div>
+
+    <div class="modal-backdrop" id="itemModal" aria-hidden="true">
+      <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detailName">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close dish details">×</button>
+        <div class="detail-media"><img id="detailImage" src="assets/hero-food.jpg" alt="" /><div class="detail-media-gradient"></div><div class="detail-media-meta"><span id="detailCategory">MAIN DISH</span><span id="detailTime">20–25 MIN</span></div><button class="video-button" id="videoButton" type="button"><span class="play-circle">▶</span><span>See it made</span></button></div>
+        <div class="detail-body">
+          <div class="detail-title-row"><div><div class="eyebrow dark-eyebrow"><span class="eyebrow-dot"></span> Kitchen favourite</div><h2 id="detailName">Ella Valley Pepper Chicken &amp; Mash</h2></div><div class="detail-price" id="detailPrice">Rs. 1,950</div></div>
+          <p id="detailDescription">A rich, peppery favourite made for the cool Ella air.</p>
+          <div class="detail-info-row"><div><span class="info-label">WHAT'S IN IT</span><p id="detailIngredients">Chicken · black pepper · potato · herbs</p></div><div><span class="info-label">GOOD TO KNOW</span><p id="detailTags">Chef's special · Made to order</p></div></div>
+          <div class="detail-footer"><div class="quantity-control"><button id="quantityDown" type="button" aria-label="Decrease quantity">−</button><b id="quantityValue">1</b><button id="quantityUp" type="button" aria-label="Increase quantity">+</button></div><button class="add-button" id="addToOrder" type="button">Add to my order <span>↗</span></button></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="video-backdrop" id="videoBackdrop" aria-hidden="true"><section class="video-modal" role="dialog" aria-modal="true" aria-label="Kitchen preview"><button class="modal-close light-close" id="videoClose" type="button" aria-label="Close kitchen preview">×</button><div class="video-stage" id="videoStage"><img id="videoImage" src="assets/kottu.jpg" alt="Kitchen preview of a dish being prepared" /><div class="video-stage-overlay"><span class="video-kicker">KITCHEN CAM · 00:18</span><h3>Made with a little<br /><em>Ella rhythm.</em></h3><button class="play-large" id="playLarge" type="button" aria-label="Play kitchen preview">▶</button><span class="video-caption">A tiny preview from our kitchen team</span></div></div></section></div>
+
+    <aside class="order-drawer" id="orderDrawer" aria-hidden="true" aria-labelledby="orderTitle">
+      <div class="drawer-header"><div><span class="eyebrow drawer-eyebrow"><span class="eyebrow-dot"></span> TABLE 08</span><h2 id="orderTitle">Your order</h2></div><button class="drawer-close" id="drawerClose" type="button" aria-label="Close order">×</button></div>
+      <div class="drawer-body" id="orderItems"><div class="order-empty"><span class="empty-plate">◌</span><h3>Your table is waiting.</h3><p>Add something delicious from the menu and it will appear here.</p><button class="outline-button" id="browseButton" type="button">Browse the menu</button></div></div>
+      <div class="drawer-bottom"><div class="total-row"><span>Subtotal</span><strong id="orderTotal">Rs. 0</strong></div><p class="drawer-service">10% service charge added at bill time</p><button class="place-order-button" id="placeOrderButton" type="button" disabled>Send order to kitchen <span>↗</span></button></div>
+    </aside>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="toast" id="toast" role="status"><span>✓</span><p>Added to your table order.</p></div>
+  </body>
+</html>
