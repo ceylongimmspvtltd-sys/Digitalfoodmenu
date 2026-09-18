@@ -124,6 +124,19 @@ const imageByCategory = {
   'Ice Cream': 'assets/sweet-treats.jpg'
 };
 
+const generatedImageById = {
+  'vegetable-soup': 'assets/menu/vegetable-soup.jpg',
+  'curry-leaves-soup': 'assets/menu/curry-leaves-soup.jpg',
+  'chicken-soup': 'assets/menu/creamy-chicken-soup.jpg',
+  'chicken-egg-noodle-soup': 'assets/menu/chicken-egg-noodle-soup.jpg',
+  'fruit-salad-plain': 'assets/menu/fruit-salad-plain.jpg',
+  'ice-cream': 'assets/menu/ice-cream.jpg',
+  'curd-and-kithul': 'assets/menu/curd-and-kithul.jpg',
+  'vanilla-ice-cream': 'assets/menu/vanilla-ice-cream.jpg',
+  'chocolate-ice-cream': 'assets/menu/chocolate-ice-cream.jpg',
+  'boiled-vegetable': 'assets/menu/boiled-vegetable.jpg'
+};
+
 const itemMap = new Map(menuItems.map(item => [item.id, item]));
 let currentCategory = 'all';
 let currentQuery = '';
@@ -135,7 +148,7 @@ let toastTimeout;
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const money = amount => `Rs. ${amount.toLocaleString('en-LK')}`;
-const imageFor = item => item.image || imageByCategory[item.category] || (item.category === 'Soup' || item.category === 'Main Dish' || item.category === 'Boiled Vegetables' || item.category === 'Chopsey' ? 'assets/hero-food.jpg' : 'image-search/umbrella-cafe-ella-sri-lanka-logo-food-2.jpg');
+const imageFor = item => item.image || generatedImageById[item.id] || imageByCategory[item.category] || (item.category === 'Soup' || item.category === 'Main Dish' || item.category === 'Boiled Vegetables' || item.category === 'Chopsey' ? 'assets/hero-food.jpg' : 'image-search/umbrella-cafe-ella-sri-lanka-logo-food-2.jpg');
 const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;' }[char]));
 
 function renderCategories() {
