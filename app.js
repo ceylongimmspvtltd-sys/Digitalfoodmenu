@@ -104,6 +104,7 @@ const categoryGroups = [
 ];
 
 const imageByCategory = {
+  'Soup': 'assets/soup.jpg',
   'Kottu Junction': 'assets/kottu.jpg',
   'Pancakes': 'assets/pancake.jpg',
   'Umbrella Special Pancakes': 'assets/pancake.jpg',
@@ -111,8 +112,16 @@ const imageByCategory = {
   'Lassie': 'assets/juice.jpg',
   'Milkshake': 'assets/juice.jpg',
   'Soft Drinks': 'assets/juice.jpg',
-  'Tea & Coffee': 'assets/hero-food.jpg',
-  'Signature Roti': 'assets/hero-food.jpg'
+  'Tea & Coffee': 'assets/tea.jpg',
+  'Signature Roti': 'assets/roti.jpg',
+  'Main Dish': 'assets/rice-curry.jpg',
+  'Boiled Vegetables': 'assets/rice-curry.jpg',
+  'Chopsey': 'assets/rice-curry.jpg',
+  'Stews / Starters': 'assets/starters.jpg',
+  'Omelette': 'assets/omelette.jpg',
+  'Umbrella Special Omelette': 'assets/omelette.jpg',
+  'Sweet Corner': 'assets/pancake.jpg',
+  'Ice Cream': 'assets/pancake.jpg'
 };
 
 const itemMap = new Map(menuItems.map(item => [item.id, item]));
@@ -342,6 +351,16 @@ function initEvents() {
   });
   $('#placeOrderButton').addEventListener('click', () => { if (orderCount()) { showToast('Order sent — your kitchen crew is on it!'); closeOrder(); } });
   $('#storyButton').addEventListener('click', () => $('#story').scrollIntoView({ behavior: 'smooth' }));
+  $$('[data-offer-action]').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    currentCategory = 'breakfast';
+    currentQuery = '';
+    $('#menuSearch').value = '';
+    renderCategories();
+    renderMenu();
+    $('#menu').scrollIntoView({ behavior: 'smooth' });
+    showToast('Breakfast favourites are ready for your table.');
+  }));
   $('#languageButton').addEventListener('click', () => { $('#languageLabel').textContent = $('#languageLabel').textContent === 'EN' ? 'සිං' : 'EN'; showToast('Language toggle is ready for your Sinhala menu copy.'); });
   $('#menuToggle').addEventListener('click', () => { const nav = $('#mobileNav'); const isOpen = nav.classList.toggle('open'); nav.setAttribute('aria-hidden', String(!isOpen)); $('#menuToggle').setAttribute('aria-expanded', String(isOpen)); });
   $$('.mobile-nav a').forEach(link => link.addEventListener('click', () => { $('#mobileNav').classList.remove('open'); $('#menuToggle').setAttribute('aria-expanded', 'false'); }));

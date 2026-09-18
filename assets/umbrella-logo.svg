@@ -1,0 +1,17 @@
+<svg width="420" height="270" viewBox="0 0 420 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Umbrella Art Cafe logo</title>
+  <desc id="desc">Teal oval Umbrella Art Cafe logo with rain lines.</desc>
+  <defs>
+    <clipPath id="oval"><ellipse cx="210" cy="132" rx="193" ry="112"/></clipPath>
+    <filter id="shadow" x="0" y="0" width="420" height="270" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#001d23" flood-opacity=".2"/></filter>
+  </defs>
+  <ellipse cx="210" cy="137" rx="191" ry="110" fill="#20A9A9" filter="url(#shadow)"/>
+  <g clip-path="url(#oval)" opacity=".74" stroke="#D9FFFF" stroke-width="2">
+    <path d="M8 87L111 -30M36 152L192 -22M76 204L252 -7M126 236L328 10M183 252L390 20M242 252L432 42M302 244L438 103M351 218L441 130"/>
+  </g>
+  <ellipse cx="210" cy="137" rx="191" ry="110" stroke="#051F27" stroke-width="6"/>
+  <ellipse cx="210" cy="137" rx="182" ry="102" stroke="#E7FFFF" stroke-width="2"/>
+  <path d="M63 83C76 70 84 74 86 95L86 150C86 166 96 174 110 174C126 174 137 164 137 148V96C137 77 145 72 156 78C164 82 169 90 169 104V150C169 166 180 174 194 174C209 174 220 165 220 149V91C220 76 228 72 239 78C247 82 252 90 252 102V150C252 165 263 174 277 174C291 174 301 164 301 149V96C301 77 310 72 321 78C328 82 333 90 333 104V146C333 165 343 174 358 174" stroke="#F3FFFF" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="112" text-anchor="middle" fill="#F3FFFF" font-family="Arial, Helvetica, sans-serif" font-size="47" font-weight="300" letter-spacing="-3">Umbrella</text>
+  <text x="210" y="161" text-anchor="middle" fill="#F3FFFF" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" letter-spacing="8">ART CAFE</text>
+</svg>
